@@ -17,12 +17,13 @@
             <input id="SeedText" type="text" placeholder="Enter the Seed" data-en-placeholder="Enter the Seed" data-ja-placeholder="シード値を入力してください">
             <button id="GenerateButton" class="btn" onclick="Generate()" data-en="Generate" data-ja="生成"></button>
             <button id="CopyButton" class="btn" onclick="CopyToClipboard()" data-en="Copy All" data-ja="全てコピー"></button>
+            <button id="DownloadButton" class="btn" onclick="download()" data-en="Download Seeds" data-ja="ダウンロード"></button>
         </div>
         <p id="List"></p>
         <div id="status" class="status"></div>
-
+    <details>
+        <summary data-en="How to Use with Cubiomes-Viewer" data-ja="Cubiomes-Viewerでの使用方法"></summary>
         <div class="steps">
-            <h2 data-en="How to Use with Cubiomes-Viewer" data-ja="Cubiomes-Viewerでの使用方法"></h2>
             <div class="step" data-en="Step 1: Enter the seed and generate sister seeds." data-ja="ステップ１：シードを入力してシスターシードを生成">
                 Step 1: Enter the seed and generate sister seeds.
             </div>
@@ -39,7 +40,7 @@
                 Step 5: All seeds in the result have the same structure positions as your initial seed!
             </div>
         </div>
-
+    </details>
         <footer>
             <p>Created by Fragrant_Result_186</p>
         </footer>
