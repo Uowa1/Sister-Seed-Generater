@@ -73,8 +73,23 @@ function CopyToClipboard() {
     }
 }
 
+function download() {
+    const seedList = document.getElementById("List").textContent.trim();
+    if (!seedList) return;
+
+    const blob = new Blob([seedList], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'seed_list.txt';
+    link.click();
+    URL.revokeObjectURL(url);
+}
+
 document.getElementById("SeedText").addEventListener("keypress", function(e) {
     if (e.key === "Enter") Generate();
 });
+
+document.getElementById("DownloadButton").addEventListener("click", download);
 
 setLanguage(currentLanguage);
